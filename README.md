@@ -1,5 +1,6 @@
 # show_weather
 Описание
+
 Сайт предоставляет информацию о прогнозе погоды на ближайшее время.
 ![image](https://github.com/user-attachments/assets/027b689d-fab8-44c9-b845-f76be723e88f)
 ![image](https://github.com/user-attachments/assets/24260d6b-29c1-485e-8c53-4bba6acdf1ce)
