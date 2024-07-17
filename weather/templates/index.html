@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/style.css' %}">
+    </script>
+</head>
+<body>
+</head>
+<body>
+    <div class="container">
+        <h1>Прогноз погоды</h1>
+            <form method="post" >
+                <input type="text" id="city_name" name="city_name" autocomplete="off" placeholder="Введите город" value="{{ form.city_nam }}" class="input-city">
+                {% csrf_token %}
+            <button type="submit" class="btn-submit">Узнать погоду</button>
+        </form>
+
+        {% if weather_data %}
+            <h2>Погода в {{ city_name }}</h2>
+            <table class="weather-table">
+                <tr>
+                    <th>Время</th>
+                    <th>Температура (°C)</th>
+                </tr>
+                {% for time, temperature in weather_data %}
+                <tr>
+                    <td>{{ time|date:"Y-m-d H:i" }}</td>
+                    <td>{{ temperature }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+        {% endif %}
+    </div>
+</body>
+</html>
