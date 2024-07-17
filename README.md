@@ -29,7 +29,7 @@ source venv/bin/activate
 ```bash
 git clone https://github.com/AlnBnd/show_weather.git
 ```
-3 Установите зависимости:
+3. Установите зависимости:
 ```bash
 pip install -r requirements.txt
 ```
